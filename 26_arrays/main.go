@@ -3,7 +3,8 @@ package main
 import (
 	"fmt"
 )
-func main(){
+
+func main() {
 
 	city1 := "istanbul"
 	city2 := "roma"
@@ -21,27 +22,27 @@ func main(){
 
 	fmt.Println(len(cities))
 
-	var myArray [5] int
+	var myArray [5]int
 	fmt.Println(myArray)
 
 	myArray[0] = 100
 	fmt.Println(myArray)
 
-	var myArray2 [4] int
-
+	var myArray2 [4]int
+	fmt.Println(myArray2)
 	/*
-	if myArray == myArray2 {	// myArray != myArray2
-		fmt.Println("MESAJ")
-	}
+		if myArray == myArray2 {	// myArray != myArray2
+			fmt.Println("MESAJ")
+		}
 	*/
 
-	for i:=0 ; i<len(cities);i++{
-		fmt.Println(i,cities[i])
+	for i := 0; i < len(cities); i++ {
+		fmt.Println(i, cities[i])
 	}
 
 	cities[0] = "ankara"
 
-	myArr := [10]{1,2,3,4,5,6,7,8,9,10}
+	myArr := [10]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 
 	myArr = mySquare(myArr)
 	fmt.Println(myArr)
@@ -49,10 +50,9 @@ func main(){
 	// FOR --- RANGE
 	// for index, value := range myArr
 
-	
 	for index, city := range cities {
 		fmt.Println(index, city)
-	} 
+	}
 
 	for _, city := range cities {
 		fmt.Println(city)
@@ -61,8 +61,8 @@ func main(){
 }
 
 func mySquare(arr [10]int) [10]int {
-	for i:=0 ; i<len(arr);i++{
-		arr[i] = arr[i]*arr[i]
+	for i := 0; i < len(arr); i++ {
+		arr[i] = arr[i] * arr[i]
 	}
 	return arr
 }
