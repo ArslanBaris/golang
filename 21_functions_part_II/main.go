@@ -29,8 +29,14 @@ func main() {
 
 	//
 
-	bölüm, kalan := bölme(104, 5)
+	bölüm, kalan := bölme(104, 5) // bölüm , _ := bölme(104, 5)  // get only first return
 	fmt.Println(bölüm, kalan)
+
+	var result = sumVariadic(1, 4, 6, 3, 11)
+	fmt.Println(result)
+
+	numbers := []int{4, 6, 8, 10, 12, 14}
+	fmt.Println(sumVariadic(numbers...))
 
 }
 
@@ -53,4 +59,12 @@ func bölme(bölünen, bölen int) (bölüm, kalan int) {
 	kalan = bölünen % bölen
 
 	return bölüm, kalan
+}
+
+func sumVariadic(numbers ...int) int {
+	sum := 0
+	for i := 0; i < len(numbers); i++ {
+		sum = sum + numbers[i]
+	}
+	return sum
 }
