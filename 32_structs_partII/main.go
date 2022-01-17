@@ -59,4 +59,9 @@ func main() {
 
 	fmt.Println(theBoss)
 
+	e1.save()
+}
+
+func (e employee) save() {
+	fmt.Println(e.name + " saved.")
 }
