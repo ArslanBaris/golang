@@ -73,4 +73,13 @@ func main() {
 	mySlc4 := make([]int, 0)
 	fmt.Printf("%#v", mySlc4)
 
+	cities := []string{"Ankara", "İstanbul", "Kocaeli"}
+	fmt.Println(cities)
+	citiesCopy := make([]string, len(cities))
+	copy(citiesCopy, cities)
+	fmt.Println(citiesCopy)
+	cities = append(cities, "İzmir", "Adana")
+
+	fmt.Println(cities[1:3])
+
 }
